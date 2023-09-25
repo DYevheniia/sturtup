@@ -1,0 +1,964 @@
+@import components/mixin
+.sprite
+    display: none
+html
+    scroll-behavior: smooth
+    font-size: 0.7px
+    +media(425)
+        font-size: 1px
+    +media(1500)
+        font-size: 1.3px
+    +media(1600)
+        font-size: 1.5px
+    body
+        margin: 0
+        font-family: "Montserrat"
+        header
+            position: relative
+            // background:  url(../img/header-bg.jpg) center / cover
+.wrapper
+    max-width: 1140rem
+    margin: 0 auto
+    box-sizing: border-box
+    padding: 0 20rem
+.flex-between
+    display: flex
+    justify-content: space-between
+    column-gap: 20rem
+    row-gap: 20rem
+.flex
+    display: flex
+.align-items-center
+    align-items: center
+.menu
+    margin: 0
+    padding: 0
+    list-style: none
+h2 
+    font-size: 20rem
+    text-transform: uppercase
+    color: #555
+    font-weight: 400
+    text-align: center
+    margin: 0
+hr
+    margin: 30rem auto
+    border: none
+    border-top: 2rem solid #555
+    width: 50rem
+figure
+    margin: 0
+
+
+
+
+.container,
+.your-project-container
+    width: 100%
+    overflow: hidden
+    position: relative
+
+
+.parallax-bg 
+    background-image: linear-gradient(to top, rgba(#000, .41) 0%, rgba(#000, .41)  100%), url('../img/header-bg.jpg')
+    background-size: cover
+    background-position: center
+    width: 120%
+    height: 110%
+    position: absolute
+    top: 0
+    left: 0
+.your-project-parallax-bg
+    background: linear-gradient(to top, rgba(#c0301c, .6) 0%, rgba(#c0301c, .6)  100%), url(../img/your-project.jpg) no-repeat bottom center / cover
+    background-size: cover
+    background-position: center
+    width: 120%
+    height: 110%
+    position: absolute
+    top: 0
+    left: 0
+/* Завантажте свій контент в цей блок */
+.content,
+.your-project-content
+    text-align: center
+    position: relative
+    z-index: 1
+        
+
+
+
+.header-line
+    padding-top: 20rem
+    padding-bottom: 20rem
+    position: fixed
+    width: 100%
+    background: rgba(#c0301c, .7)
+    +media(680)
+        padding-top: 40rem
+        padding-bottom: 40rem
+        background: transparent
+        position: static
+.headerLineBg
+    background: #c0301c
+    +media(680)
+        background: transparent
+.logo
+    margin-right: 40rem
+    z-index: 2
+    a
+        font-size: 24rem
+        line-height: 36rem
+        color: #fff
+        font-weight: 700
+        text-decoration: none
+.header-menu
+    display: none
+    +media(680)
+        display: flex
+    li
+        a
+            display: inline-block
+            font-size: 14rem
+            letter-spacing: 0rem
+            line-height: 24rem
+            color: #fff
+            font-weight: 400
+            text-decoration: none
+            max-width: 540rem
+            transition: 1s ease all
+            &:hover
+                transform: scale(1.5)
+        &+li
+            padding-left: 0
+            +media(680)
+                margin-left: 10rem
+            +media(860)
+                margin-left: 30rem
+.burger-span
+    display: block
+    width: 30rem
+    height: 2rem
+    background: #fff
+    &+.burger-span
+        margin-top: 6rem
+    +media(680)
+        display: none
+.burgerMenu
+    display: block
+    position: absolute
+    top: 76rem
+    left: 0
+    padding: 0 20rem
+    margin: 0
+    width: calc(100% - 40rem)
+    background: #c0301c
+    text-align: left
+    z-index: 2
+    +media(680)
+        background: transparent
+        position: static
+        padding: 0
+    li
+        padding: 10rem 0
+        +media(680)
+            padding: 0
+
+
+
+
+
+
+
+
+
+.header-content
+    padding: 260rem 0 290rem
+    p
+        margin: 0
+        text-transform: uppercase
+        color: #fff
+        font-weight: 400
+        text-align: center
+        &:nth-child(1)
+            font-size: 48rem
+            margin-bottom: 10rem
+        &:nth-child(2)
+            font-size: 20rem
+            line-height: 24rem
+            margin-bottom: 50rem
+            color: #fff
+            font-weight: 400
+            font-family: "Roboto Slab"
+            text-align: center
+            text-transform: capitalize
+        &:nth-child(3)
+            a
+                display: inline-block
+                font-size: 16rem
+                text-transform: uppercase
+                color: #ffffff
+                font-weight: 400
+                text-align: center
+                text-decoration: none
+                padding: 11rem 33rem
+                border-radius: 2rem
+                border: 2rem solid #ffffff
+                box-sizing: border-box
+                transition: .5s ease all
+                &:hover
+                    color: #c0301c
+                    background: #fff 
+                            
+
+
+
+
+
+.authorization
+    position: absolute
+    display: none
+    top: 50%
+    left: 50%
+    padding: 30rem
+    box-sizing: border-box
+    background: #fff
+    width: 50%
+    height: 50%
+    transform: translate(-50%, -50%)
+    h2
+        margin-bottom: 40rem
+    a
+        display: block
+        padding: 11rem 25rem
+        border: 2rem solid #c0301c
+        font-size: 18rem
+        text-transform: uppercase
+        color: #c0301c
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-decoration: none
+        box-sizing: border-box
+        text-align: center
+    
+.cross,.recent-blog-cross,.forma-cross
+    position: absolute
+    right: 30rem
+    width: 30rem
+    height: 30rem
+    z-index: 2
+    cursor: pointer
+    span
+        position: absolute
+        margin-top: 15rem
+        width: 100%
+        height: 2rem
+        background: #000
+        &:first-child
+            transform: rotate(45deg)
+        &:last-child
+            transform: rotate(-45deg)
+            
+.number
+    width: 50rem
+    height: 50rem
+    background: #c0301c
+    margin-bottom: 30rem
+    p
+        margin: 0
+        padding: 15rem
+        box-sizing: border-box
+        font-size: 20rem
+        text-align: center
+        box-sizing: border-box
+        color: #fff
+.drop
+    width: 25%
+    height: 150rem
+    background: #000
+    margin-bottom: 20rem
+    div
+        width: 100%
+        height: 100%
+        padding: 30% 15%
+        box-sizing: border-box
+        p
+            font-size: 30rem
+
+
+
+.authorization-button
+    a
+        display: inline-block
+        width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+main
+    background: #fff       
+.services-block
+    padding: 100rem 0
+    figure
+        margin: 0
+    p
+        margin-bottom: 70rem
+        font-size: 16rem
+        color: #555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-align: center
+    h3
+        margin: 0 0 24rem 0
+        font-size: 14rem
+        text-transform: uppercase
+        color: #555
+        font-weight: 400
+        text-align: center
+p.des
+    max-width: 360rem
+    margin-bottom: 30rem
+    width: 100%
+    font-size: 14rem
+    line-height: 24rem
+    color: #555555
+    font-weight: 400
+    font-family: "Roboto Slab"
+    text-align: center
+.services-cards-line
+    flex-wrap: wrap
+    justify-content: center
+    +media(860)
+        flex-wrap: nowrap
+.services-wrap-img
+    width: 90rem
+    margin: 0 auto
+    border-radius: 50%
+    border: 2rem solid #ddd
+    margin-bottom: 30rem
+    transition: .5s ease all
+    &:hover
+        background: #c0301c
+        use
+            fill: #fff
+    use
+        transition: .5s ease all
+        transform: scale(.7)
+        +media(425)
+            transform: scale(1)
+        +media(1500)
+            transform: scale(1.3)
+        +media(1600)
+            transform: scale(1.5)
+.cleanTypography
+    width: 44rem
+    height: 41rem
+    padding: 24.5rem 23rem
+.servicesCode
+    width: 53rem
+    height: 40rem
+    padding: 25rem 18.5rem
+.servicesSupport
+    width: 49rem
+    height: 49rem
+    padding: 20.5rem
+
+
+
+
+
+
+
+
+.about-us-block
+    padding: 100rem 0
+    background: #f8f8f8
+    p
+        margin: 0 0 70rem 0
+        font-size: 16rem
+        line-height: 24rem
+        color: #555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-align: center
+.p-line
+    margin-bottom: 70rem
+    flex-wrap: wrap
+    p
+        margin: 0
+        font-size: 14rem
+        line-height: 24rem
+        color: #555555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-align: left
+        +media(850)
+            max-width: 530rem
+    +media(850)
+        flex-wrap: nowrap
+.slider-block
+    position: relative
+    overflow: hidden
+    span
+        transition: .5s ease all
+        cursor: pointer
+        &:hover
+            background: #c0301c
+span.prev-button
+    position: absolute
+    display: block
+    top: 50%
+    left: 0
+    width: 35rem
+    height: 38rem
+    background-color: rgba(#555, .2)
+    transform: translate(0, -50%)
+    &:before 
+        content: ''
+        position: absolute
+        top: 50%
+        left: 40%
+        width: 10rem
+        height: 10rem
+        border: 2rem solid #ddd
+        box-sizing: border-box
+        border-top: none
+        border-right: none
+        transform: rotate(45deg) translate(-50%, -50%)
+
+span.next-button
+    position: absolute
+    display: block
+    top: 50%
+    right: 0
+    width: 35rem
+    height: 38rem
+    background-color: rgba(#555, .2)
+    transform: translate(0, -50%)
+    &:before 
+        content: ''
+        position: absolute
+        top: 50%
+        right: 40%
+        width: 10rem
+        height: 10rem
+        border: 2rem solid #ddd
+        box-sizing: border-box
+        border-bottom: none
+        border-left: none
+        transform: rotate(45deg) translate(-50%, -50%)
+.slider
+    width: calc( 200% + 20rem)
+    +media(590)
+        width: calc(150% - 85rem)
+    +media(900)
+        width: 100%
+    img
+        width: 100%
+.slide
+    width: 100%
+
+
+
+
+.active
+    color: #c0301c !important
+
+
+
+.latest-works-block
+    padding: 100rem 0
+.latest-works-menu
+    display: flex
+    justify-content: center
+    margin-bottom: 70rem
+    li+li
+        margin-left: 20rem
+    p
+        font-size: 16rem
+        color: #555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-align: center
+        text-decoration: none
+        cursor: pointer
+.image-block
+    justify-content: center
+    flex-wrap: wrap
+    +media(1130)
+        justify-content: center
+.latest-wrap
+    position: relative
+    max-width: 350rem
+    width: 100%
+    img
+        width: 100%
+        height: 320rem
+
+
+
+.your-project-block
+    padding: 100rem 0
+
+.your-project
+    h3
+        margin: 0 auto
+        max-width: 565rem
+        font-size: 30rem
+        line-height: 44rem
+        color: #fff
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-align: center
+        margin-bottom: 42rem
+    p
+        margin: 0
+        text-align: center
+        a
+            padding: 11rem 25rem
+            border: 2rem solid #fff
+            font-size: 18rem
+            line-height: 44rem
+            text-transform: uppercase
+            color: #fff
+            font-weight: 400
+            font-family: "Roboto Slab"
+            text-decoration: none
+            text-align: center
+            transition: .5s ease all
+            &:hover
+                color: #c0301c
+                background: #fff
+
+
+
+
+
+
+
+
+.recent-blog-block
+    position: relative
+    padding: 100rem 0
+.recent-blog-des
+    margin: 0 0 70rem 0
+    font-size: 16rem
+    line-height: 24rem
+    color: #555555
+    font-weight: 400
+    font-family: "Roboto Slab"
+    text-align: center
+.recent-blog-card
+    flex-wrap: wrap
+    +media(970)
+        flex-wrap: nowrap
+
+.recent-blog-wrap-img
+    width: 100%
+    margin-bottom: 20rem
+    img
+        width: 100%
+    +media(970)
+        margin-right: 30rem
+        max-width: 450rem
+        margin-bottom: 0
+
+.headerline-card-block
+    align-items: center
+.dateBlock
+    margin-right: 25rem
+    border: 2rem solid #555
+    padding: 12rem 20rem
+    position: relative
+    p
+        margin: 0
+        color: #777
+        text-align: center
+        text-transform: uppercase
+        font-weight: 700
+        &:first-child
+            font-size: 24rem
+            letter-spacing: 2rem
+        &:last-child
+            font-size: 14rem
+            letter-spacing: 1rem
+            line-height: 20rem
+.header-card
+    h3
+        margin: 0 0 10rem 0
+        font-size: 16rem
+        text-transform: uppercase
+        color: #c0301c
+        font-weight: 400
+        text-align: center
+    p
+        margin: 0
+        font-size: 13rem
+        color: #777
+        font-weight: 400
+        font-family: "Roboto Slab"
+.recent-blog-description
+    margin-bottom: 30rem
+    font-size: 14rem
+    line-height: 24rem
+    color: #555
+    font-weight: 400
+    font-family: "Roboto Slab"
+    +media(970)
+        max-width: 640rem
+        max-height: 150rem
+        overflow: hidden
+
+
+.recent-popap-bg
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    background: rgba(#000, .7)
+    left: 0
+    z-index: 1
+.recent-popap
+    display: none
+    position: fixed
+    padding: 30rem
+    top: 50%
+    left: 50%
+    max-width: 1140rem
+    width: 100%
+    height: auto
+    background: #fff
+    box-sizing: border-box
+    z-index: 3
+    transform: translate(-50%, -50%)
+    .recent-blog-description
+        max-height: none
+        max-width: none
+    
+
+
+
+
+
+
+
+
+
+
+
+.posab
+    opacity: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    transition: .5s ease all
+    cursor: pointer
+    text-align: center
+    &:hover
+        opacity: 1
+        background: rgba(#c0301c, .7)
+    h3
+        margin: 0
+        margin-bottom: 16rem
+        font-size: 18rem
+        color: #fff
+        font-weight: 400
+    p
+        margin: 0
+        margin-bottom: 24rem
+        font-size: 12rem
+        color: #fff
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-transform: capitalize
+    a
+        position: relative
+        display: inline-block
+        font-size: 14rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        text-decoration: none
+        color: #c0301c
+        font-weight: 400
+        font-family: "Roboto Slab"
+        background-color: #fff
+        padding: 11rem 29rem 
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            right: 10%
+            width: 7rem
+            height: 7rem
+            box-sizing: border-box
+            border: 2rem solid #c0301c
+            border-bottom: none
+            border-left: none
+            transform: translate(-50%, -50%) rotate(45deg)
+.recent-blog-read
+    font-size: 13rem
+    letter-spacing: 1rem
+    text-transform: uppercase
+    color: #777
+    font-weight: 700
+    font-family: "Roboto Slab"
+    transition: 1s ease all
+    cursor: pointer
+    &:hover
+        color: #c0301c
+
+.line
+    margin: 35rem 0
+    width: 100%
+    border: none
+    border-top: 1rem solid #ddd
+
+
+
+
+
+
+.partner-block
+    padding: 100rem 0
+.partner-line
+    margin-bottom: 70rem
+    flex-wrap: wrap
+    justify-content: center
+    +media(750)
+        justify-content: space-between
+        flex-wrap: nowrap
+
+.partner
+    p
+        margin: 0 auto
+        max-width: 790rem
+        width: 100%
+        line-height: 30rem
+        color: #555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-align: center
+p.partner-first
+    font-size: 18rem
+    margin-bottom: 30rem
+p.partner-last
+    font-size: 20rem
+    margin-bottom: 30rem
+.span-block
+    justify-content: center
+.circle
+    width: 13rem
+    height: 13rem
+    border-radius: 50%
+    background-color: #ddd
+    &+span
+        margin-left: 6rem
+
+
+
+
+
+
+
+.get-touch-block
+    padding: 100rem 0
+
+.get-touch-des
+    margin-bottom: 70rem
+    font-size: 16rem
+    color: #555
+    font-weight: 400
+    font-family: "Roboto Slab"
+    text-align: center
+.image-wrap
+    width: 16rem
+    margin-right: 10rem
+.addres
+    img
+        width: 13rem
+        height: 18rem
+.phone
+    img
+        width: 13rem
+        height: 21rem
+.mail
+    img
+        width: 16rem
+        height: 12rem
+.info
+    margin-bottom: 30rem
+    h3
+        margin: 0 0 15rem 0
+        font-size: 14rem
+        text-transform: uppercase
+        color: #555
+        font-weight: 400
+    p
+        margin: 0
+.info-block
+    flex-wrap: wrap
+    +media(680)
+        flex-wrap: nowrap
+.form-info
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +media(680)
+        display: block
+    address, a
+        max-width: 270rem
+        font-size: 12rem
+        line-height: 20rem
+        font-style: normal
+        color: #555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-decoration: none
+        transition: .5s ease all
+    a:hover
+        color: #c0301c
+
+.forma
+    max-width: 730rem
+    width: 100%
+    
+    div
+        column-gap: 30rem
+    input
+        outline: none
+        border-radius: 0
+        padding: 13rem
+        width: 100%
+        margin-bottom: 20rem
+        font-size: 12rem
+        color: #555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        box-sizing: border-box
+        border: 1rem solid #555
+        &::placeholder
+            text-transform: uppercase
+        &:focus
+            border: 1rem solid #c0301c
+    textarea
+        padding: 13rem
+        margin-bottom: 20rem
+        outline: none
+        border-radius: 0
+        border: 1rem solid #555
+        width: 100%
+        font-family: "Roboto Slab"
+        color: #555
+        resize: none
+        font-size: 12rem
+        box-sizing: border-box
+        &::placeholder
+            text-transform: uppercase
+        &:focus
+            border: 1rem solid #c0301c
+.send-block
+    a
+        padding: 13.5rem 32rem
+        font-size: 12rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        color: #555
+        font-weight: 400
+        text-decoration: none
+        border: 1rem solid #555
+        font-family: "Roboto Slab"
+    p
+        width: 50%
+        span
+            font-size: 12rem
+            font-weight: 400
+            font-family: "Roboto Slab"
+            &:first-child
+                color: #c0301c
+                margin-right: 4rem
+            &:last-child
+                color: #555
+#sender-block
+    display: none
+    position: fixed
+    padding: 30rem
+    top: 50%
+    left: 50%
+    max-width: 1140rem
+    width: 50%
+    height: auto
+    background: #fff
+    box-sizing: border-box
+    z-index: 3
+    transform: translate(-50%, -50%)
+    p
+        font-size: 16rem
+        line-height: 24rem
+        color: #555
+        font-weight: 400
+        font-family: "Roboto Slab"
+        &:nth-child(odd)
+            font-style: italic
+            color: red            
+
+
+
+footer
+    padding: 100rem 0
+    background-color: #c0301c
+    hr
+        border-color: #fff
+    p
+        font-size: 12rem
+        text-transform: uppercase
+        color: #fff
+        font-weight: 400
+        font-family: "Roboto Slab"
+        text-align: center
+.network
+    justify-content: center
+    div
+        padding: 9.3rem 7.5rem
+        border: 2rem solid #fff
+        border-radius: 50%  
+        &+div
+            margin-left: 13rem
+        img
+            width: 17rem
+            height: 13rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

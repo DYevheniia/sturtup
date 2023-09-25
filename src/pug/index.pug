@@ -1,0 +1,243 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap" rel="stylesheet">
+        title Sturtup
+    body#body
+        include components/mixin
+        include ../img/sprite.svg
+        header.container
+            .recent-popap-bg
+            .parallax-bg
+            .content
+                .header-line.wrapper.flex-between.align-items-center
+                    .logo 
+                        a(href="#") Startup
+                    nav 
+                        div.burger
+                            span.burger-span
+                            span.burger-span
+                            span.burger-span
+                        ul.menu.header-menu.flex-between
+                            li
+                                a(href="#services") Home
+                            li
+                                a(href="#about") Services
+                            li
+                                a(href="#latest") About
+                            li
+                                a(href="#project") Works
+                            li
+                                a(href="#recent") Blog
+                            li
+                                a(href="#partner") Clients
+                            li
+                                a(href="#touch") Contact
+                .header-content
+                    .wrapper
+                        p Welcome to STARTUP
+                        p Your Favourite Creative Agency Template
+                        p
+                            a(href="#", id="authorization-button") Get Started
+                .authorization
+                    .cross 
+                        span 
+                        span 
+                    h2 Login
+                    div 
+                        .numbers.flex-between
+                            div(class="number", draggable="true")     
+                                p 0
+                            div(class="number", draggable="true")
+                                p 1
+                            div(class="number", draggable="true") 
+                                P 2
+                            div(class="number", draggable="true") 
+                                p 3
+                            div(class="number", draggable="true")     
+                                p 4
+                            div(class="number", draggable="true")     
+                                p 5
+                            div(class="number", draggable="true") 
+                                p 6
+                            div(class="number", draggable="true")     
+                                p 7
+                            div(class="number", draggable="true")     
+                                p 8
+                            div(class="number", draggable="true")     
+                                p 9
+                        .drop-block.flex-between
+                            .drop
+                            .drop
+                            .drop
+                            .drop
+                        .flex-between.authorization-button
+                            a(href="#") login
+                            a(href="#", id="reset") reset
+        main 
+            .services-block#services
+                .services.wrapper
+                    h2 Services
+                    hr
+                    p We offer ipsum dolor sit amet, consetetur sadipscing elitr amet
+                    .services-cards-line.flex-between
+                        +card(cardsServices.cleanTypography)
+                        +card(cardsServices.rockSolidCode)
+                        +card(cardsServices.expertSupport)
+            .about-us-block#about
+                .about-us.wrapper 
+                    h2 About us
+                    hr
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+                    .flex-between.p-line
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.
+                    .slider-block
+                        span.prev-button
+                        span.next-button
+                        .slider.flex-between
+                            div.slide.a-1
+                                img(src="img/Md-Khalil-Uddin.jpg", alt="")
+                            div.slide.a-2
+                                img(src="img/Shamim-Mia.jpg", alt="")
+                            div.slide.a-3
+                                img(src="img/John-Doe.jpg", alt="")
+                            div.slide.a-4
+                                img(src="img/Rubel-Miah.jpg", alt="")
+            .latest-works-block#latest
+                .latest-works.wrapper
+                    h2 Latest Works
+                    hr
+                    ul.menu.latest-works-menu
+                        li
+                            p(id="all", class="active productButton") All
+                        li
+                            p(id="branding", class="productButton") Branding
+                        li
+                            p(id="design", class="productButton") Design
+                        li
+                            p(id="development", class="productButton") Development
+                        li
+                            p(id="strategy", class="productButton") Strategy
+                    .image-block.flex-between
+                        +image(image.hairDresser)
+                        +image(image.bird)
+                        +image(image.phone)
+                        +image(image.camera)
+                        +image(image.bike)
+                        +image(image.copybook)
+                        +image(image.laptop)
+                        +image(image.table)
+                        +image(image.adds)
+            .your-project-block#project.your-project-container
+                .your-project-parallax-bg
+                .your-project.wrapper.your-project-content
+                    h3 Do you like OUR WORK so far? Let's talk about YOUR PROJECT!
+                    p 
+                        a(href="#touch") Get in Touch
+            .recent-blog-block#recent
+                .recent-blog.wrapper
+                    h2 Recent blog posts
+                    hr
+                    p.recent-blog-des Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+                    +cards(recentBlog.ideas)
+                    hr.line
+                    +cards(recentBlog.elements)
+            .partner-block#partner 
+                .partner.wrapper
+                    .partner-line.flex-between.align-items-center
+                        div
+                            img(src="img/deorham.svg", alt="")
+                        div
+                            img(src="img/ratings.svg", alt="")
+                        div
+                            img(src="img/malik-media.svg", alt="")
+                        div
+                            img(src="img/bcause.svg", alt="")
+                        div
+                            img(src="img/womgify.svg", alt="")
+                    p.partner-first "Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum”
+                    p.partner-last John Doe, Google Inc.
+                    .span-block.flex
+                        span.circle 
+                        span.circle 
+                        span.circle 
+            .get-touch-block#touch 
+                .get-touch.wrapper
+                    h2 Get in touch
+                    hr
+                    p.get-touch-des Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+                    .info-block.flex-between
+                        .form-info
+                            .addres.flex
+                                .image-wrap
+                                    img(src="img/map-marker.svg", alt="")
+                                .info 
+                                    h3 Address
+                                    address 312, 7th Ave, New York <br> NY 101200, United States of America
+                            .phone.flex
+                                .image-wrap
+                                    img(src="img/mobile-phone.svg", alt="")
+                                .info 
+                                    h3 Hotline (24x7)
+                                    p
+                                        a(href="tel:+65 0052 300") +65 0052 300, 
+                                        a(href="tel:+65 88251 210")  +65 88251 210 <br>
+                                        a(href="tel:+88 01723 511 340") +88 01723 511 340 
+                            .mail.flex
+                                .image-wrap
+                                    img(src="img/envelope.svg", alt="")
+                                .info 
+                                    h3 E-mail
+                                    p 
+                                        a(href="mailto:shapedtheme@gmail.com") shapedtheme@gmail.com
+                                    p 
+                                        a(href="mailto:khalilkode@gmail.com") khalilkode@gmail.com
+                        form(action="").forma
+                            .flex-between
+                                input(type="text" placeholder="Your Name" id="name" required class="inputForm")
+                                input(type="email" placeholder="Your E-mail" id="mail" required class="inputForm")
+                            .flex-between
+                                input(type="text" placeholder="Your subject" id="subject" required class="inputForm")
+                                input(type="text" placeholder="Company name" id="company" required class="inputForm")
+                            textarea(name="", cols="30", rows="5" placeholder="Write your message" id="message" required class="inputForm")
+                            .flex.send-block.align-items-center
+                                a(href="#", id="send", type="sumbit") Send message
+                                p
+                                    span * 
+                                    span  We’ll contact you as as possible. We don’t reply on Monday.
+                            #sender-block
+                                .forma-cross
+                                    span 
+                                    span 
+                                h2 jkdfjjfdj
+                                .name
+                                    p Name:
+                                .email
+                                    p Email:
+                                .subject
+                                    p Subject:
+                                .company
+                                    p Company:
+                                .message
+                                    p Message:
+        footer 
+            .footer-content.wrapper
+                .network.flex
+                    div 
+                        img(src="img/twitter.svg", alt="")
+                    div 
+                        img(src="img/twitter.svg", alt="")
+                    div 
+                        img(src="img/twitter.svg", alt="")
+                    div 
+                        img(src="img/twitter.svg", alt="")
+                hr
+                p © 2015 Startup, Designed by ShapedTheme
+        script(src="js/script.js") 
+                    

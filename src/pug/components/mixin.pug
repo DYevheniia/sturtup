@@ -1,0 +1,174 @@
+-
+    let cardsServices = {
+        cleanTypography: {
+            svg: "#cleanTypography",
+            class: "cleanTypography",
+            headerLine: "Clean Typography",
+            hack: "hackNo",
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum."
+            ],
+        },
+        rockSolidCode: {
+            svg: "#servicesCode",
+            class: "servicesCode",
+            headerLine: "Rock Solid Code",
+            hack: "hack",
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum."
+            ],
+        },
+        expertSupport: {
+            svg: "#servicesSupport",
+            class: "servicesSupport",
+            headerLine: "Expert Support",
+            hack: "hackNo",
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum."
+            ],
+        },
+        
+    }
+mixin card(oneCard) 
+    figure.cards
+        figcaption 
+            div(class="services-wrap-img", id=oneCard.hack)
+                svg(class=oneCard.class)
+                    use(xlink:href=oneCard.svg)
+            h3.headerline-services #{oneCard.headerLine}
+            p.des #{oneCard.description}
+
+-
+    let recentBlog = {
+        ideas: {
+            image: "img/ideas.jpg",
+            date: "18",
+            mon: "Oct",
+            headerline: "Startup ideas needs to be funded",
+            subtitle: "By Khalil Uddin in Development",
+            description: [
+                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam"
+            ],
+            readMore: "Read more",
+        },
+        elements: {
+            image: "img/elements.jpg",
+            date: "18",
+            mon: "Oct",
+            headerline: "User Interface Designing Elements",
+            subtitle: "By Khalil Uddin in Development",
+            description: [
+                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor idunt ut labore et dolore aliquyam"
+            ],
+            readMore: "Read more",
+        }
+    }
+
+mixin cards(Card) 
+    figure.cards
+        figcaption.flex.recent-blog-card
+            .recent-blog-wrap-img
+                img(src=Card.image, alt="rrr")
+            .content-card
+                .headerline-card-block.flex
+                    .dateBlock
+                        p #{Card.date}
+                        p #{Card.mon}
+                    .header-card
+                        h3.headerline #{Card.headerline}
+                        p #{Card.headerline}
+                p.recent-blog-description #{Card.description}
+                p.recent-blog-read #{Card.readMore}      
+        .flex.recent-blog-card.recent-popap
+            .recent-blog-cross
+                span 
+                span 
+            .recent-popap-content-card
+                .headerline-card-block.flex
+                    .dateBlock
+                        p #{Card.date}
+                        p #{Card.mon}
+                    .header-card
+                        h3.headerline #{Card.headerline}
+                        p #{Card.headerline}
+                p.recent-blog-description #{Card.description}
+    
+
+
+-
+    let image = {
+        hairDresser: {
+           img: "img/hair-dresser.jpg",
+           alt: "",
+           category: "branding",
+           headerline: "Hair Dresser",
+           button : "View"
+        },
+        bird: {
+           img: "img/bird.jpg",
+           alt: "",
+           category: "design",
+           headerline: "Bird",
+           button : "View"
+        },
+        phone: {
+           img: "img/phone.jpg",
+           alt: "",
+           category: "development",
+           headerline: "Phone",
+           button : "View"
+        },
+        camera: {
+           img: "img/camera.jpg",
+           alt: "",
+           category: "branding",
+           headerline: "Camera",
+           button : "View"
+        },
+        bike: {
+           img: "img/bike.jpg",
+           alt: "",
+           category: "strategy",
+           headerline: "Bike",
+           button : "View"
+        },
+        copybook: {
+           img: "img/copybook.jpg",
+           alt: "",
+           category: "design",
+           headerline: "Copybook",
+           button : "View"
+        },
+        laptop: {
+           img: "img/laptop.jpg",
+           alt: "",
+           category: "development",
+           headerline: "Laptop",
+           categoryText: "category", 
+           button : "View"
+        },
+        table: {
+           img: "img/table.jpg",
+           alt: "",
+           category: "design",
+           headerline: "Table",
+           button : "View"
+        },
+        adds: {
+           img: "img/adds.jpg",
+           alt: "",
+           category: "development",
+           headerline: "Adds",
+           button : "View"
+        },
+        
+    }
+
+mixin image(img)
+    div(class="latest-wrap product", data-category=img.category)
+        img(src=img.img, alt=img.alt)
+        div.posab
+            h3 #{img.headerline}
+            p #{img.category}
+            p
+                a(href="#") #{img.button} 
